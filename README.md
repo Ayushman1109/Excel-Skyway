@@ -62,6 +62,9 @@ For security and portability, paths are configured via a JSON file.
    Create or edit `orm_skyway_config_excel.json` in the root directory (this file is gitignored). You must set up the local paths for the JDX SDK, JDBC driver, and Excel workbook. A standard setup looks like this:
    ```json
    {
+       "_comments": [
+           "ORM Skyway config for Excel via the CData JDBC Driver for Excel."
+       ],
        "jdbc_url": "jdbc:excel:URI=./customers.xlsx",
        "db_schema": "",
        "db_user": "",
@@ -71,9 +74,18 @@ For security and portability, paths are configured via a JSON file.
        "db_type": "",
        "jx_home": "/path/to/Gilhari-0.8.0b-SDK",
        "object_model_package": "com.poc.excel.model",
+       "reverse_eng_template_config": "reverse_eng_template",
+       "tables": "all",
+       "model_overview": "Excel workbook exposed as an object model (Excel + CData proof of concept)",
+       "embed_db_file_in_microservice": false,
        "docker_image_name": "excel-poc-service",
        "docker_image_tag": "1.0",
-       "gilhari_host_port": 80
+       "gilhari_host_port": 80,
+       "skip_reverse_eng": false,
+       "skip_compile": false,
+       "verbose": true,
+       "docker_hostname": "generic-laptop",
+       "docker_mac_address": "00-00-00-00-00-00"
    }
    ```
 
