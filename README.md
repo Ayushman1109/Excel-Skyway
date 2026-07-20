@@ -33,18 +33,20 @@ This project successfully proves that Excel (via the CData JDBC driver) supports
 This project uses the following file structure:
 ```text
 excel_poc/
+├── .dockerignore
 ├── .git/
-├── bin/                          # Compiled Java classes
-├── config/                       # Driver jars, generated reverse engineering configs, and data file
-├── gilhari/                      # Generated Gilhari configuration, Dockerfile, and curl scripts
-├── scripts/                      # Helper scripts
-├── src/                          # Generated Java object model source files
 ├── .gitattributes                
 ├── .gitignore                    
+├── bin/                          # Compiled Java classes
+├── config/                       # Driver jars, generated reverse engineering configs, and data file
+├── customers.xlsx                # Sample Excel data file
+├── gilhari/                      # Generated Gilhari configuration, Dockerfile, and curl scripts
 ├── LICENSE                       # Project license
-├── README.md                     # This file
 ├── orm_skyway_config_excel.json  # Pipeline configuration (gitignored)
-└── sources.txt                   # Java source files compilation list (gitignored)
+├── README.md                     # This file
+├── scripts/                      # Helper scripts
+├── sources.txt                   # Java source files compilation list (gitignored)
+└── src/                          # Generated Java object model source files
 ```
 
 ## Prerequisites & Environment Setup
