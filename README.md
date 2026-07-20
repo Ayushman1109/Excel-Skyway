@@ -28,6 +28,10 @@ This project successfully proves that Excel (via the CData JDBC driver) supports
 - Data access via REST
 - Live natural-language querying via AI agents connected through MCP.
 
+### Object Model Description
+
+The object model derived by the `orm_skyway` tool is dynamically mapped to the Excel dataset. Because Excel data is often semi-structured compared to a strict relational database, the generated Java object model (e.g., `com.poc.excel.model.Customers`) extends `JDX_JSONObject`. This allows it to gracefully handle records from the Excel spreadsheet as JSON objects, providing a flexible representation of the data that Gilhari can seamlessly expose over REST.
+
 ## Project Structure
 
 This project uses the following file structure:
@@ -121,14 +125,29 @@ For security and portability, paths are configured via a JSON file.
    ```json
    "excel-ormcp": {
        "command": "ormcp-server",
-       "args": [],
-       "env": {
-           "GILHARI_BASE_URL": "http://localhost:80/gilhari/v1/",
-           "MCP_SERVER_NAME": "excel-ormcp",
-           "GILHARI_NAME": "excel-poc-service",
-           "GILHARI_IMAGE": "excel-poc-service:1.0",
-           "GILHARI_PORT": "80",
-           "READONLY_MODE": "True"
-       }
-   }
-   ```
+        "args": [],
+        "env": {
+            "GILHARI_BASE_URL": "http://localhost:80/gilhari/v1/",
+            "MCP_SERVER_NAME": "excel-ormcp",
+            "GILHARI_NAME": "excel-poc-service",
+            "GILHARI_IMAGE": "excel-poc-service:1.0",
+            "GILHARI_PORT": "80",
+            "READONLY_MODE": "True"
+        }
+    }
+    ```
+
+   Once connected, you can ask the AI Agent natural language queries such as:
+   - *"Show me the first 5 customers in the database."*
+   - *"How many customers are located in New York?"*
+   - *"Retrieve the contact details for the customer named John Doe."*
+
+## Repository Metadata
+
+*The following can be used to update your GitHub repository settings:*
+
+**Description:**
+A Proof of Concept demonstrating the ORM Skyway pipeline to expose Microsoft Excel data as a REST microservice for AI Agents using JDX and Gilhari.
+
+**Topics:**
+`excel`, `orm-skyway`, `ai-agent`, `mcp`, `java`, `gilhari`, `jdx`, `rest-api`, `cdata`
