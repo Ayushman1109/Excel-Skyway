@@ -1,5 +1,9 @@
 # Excel ORM Skyway PoC
 
+Software Tree's ORM Skyway automation tool connects your existing data sources to AI agents — automatically. Point it at your data, and within minutes you have a secure, governed API layer that lets AI reason about your business objects: customers, orders, products, employees — whatever your domain holds.
+
+You can immediately start leveraging your data for AI applications through a secure and efficient ORM pipeline.
+
 This project is a Proof of Concept (PoC) validating Software Tree's [ORM Skyway](https://github.com/SoftwareTree/orm_skyway_automation) pipeline against **Microsoft Excel**. It demonstrates data access and AI-agent integration for Excel using JDX, Gilhari, and ORMCP.
 
 ## Project Overview
