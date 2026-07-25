@@ -6,6 +6,12 @@ You can immediately start leveraging your data for AI applications through a sec
 
 This project is a Proof of Concept (PoC) validating Software Tree's [ORM Skyway](https://github.com/SoftwareTree/orm_skyway_automation) pipeline against **Microsoft Excel**. It demonstrates data access and AI-agent integration for Excel using JDX, Gilhari, and ORMCP.
 
+## Core Technologies
+
+- **JDX**: A lightweight, non-intrusive Java ORM engine that reverse-engineers relational schemas into a curated Java/JSON object model—the foundational data-access layer beneath Gilhari.
+- **Gilhari**: A RESTful microservice framework, built on JDX, that exposes your database as a governed, object-oriented REST API with no hand-written server code.
+- **ORMCP**: An MCP-compliant semantic layer that bridges AI agents to your database through Gilhari. It exposes enterprise data as curated business objects (rather than raw SQL), improving reasoning clarity, reducing token usage, and introducing a cleaner governance boundary.
+
 ## Project Overview
 
 **The pipeline workflow:**
